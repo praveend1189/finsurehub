@@ -101,12 +101,45 @@ nav{
     border-bottom: 2px solid var(--first-color);
 }
 
-.nav-logo img{
-    /* margin-top: 8px; */
-    height: 70px;
-    width: 100px;
-    object-fit: fill;
+
+/* Default (large screens) */
+    .nav-logo img
+ {
+        width: 254px !important;
+        margin-top: 12px;
+    }
+
+/* Tablet */
+@media screen and (max-width: 900px) {
+    .nav-logo img {
+        width: 120px;
+    }
 }
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    .nav-logo img {
+        width: 100px;
+    }
+}
+
+/* Small mobile */
+@media screen and (max-width: 400px) {
+    .nav-logo img {
+        width: 80px;
+    }
+}
+
+/* Very small screens */
+@media screen and (min-width: 320px) {
+    .nav-logo img {
+        width: 190px;
+        margin-top: 12px;
+    }
+}
+
+
+
 .nav-name{
     font-size: 30px;
     font-weight: 600;
