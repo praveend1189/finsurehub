@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none" role="img" aria-labelledby="t">
+  <title id="t">Term Life Insurance</title>
+  <circle cx="80" cy="80" r="76" fill="#E3EEF9"/>
+  <path d="M80 28c28 0 52 18 58 38H22C28 46 52 28 80 28Z" fill="#1E5AA8"/>
+  <path d="M80 28V40" stroke="#0B1F4D" stroke-width="6" stroke-linecap="round"/>
+  <rect x="76" y="38" width="8" height="18" rx="3" fill="#0B1F4D"/>
+  <circle cx="56" cy="92" r="10" fill="#0B1F4D"/>
+  <path d="M40 122c0-12 32-12 32 0v10H40v-10Z" fill="#0B1F4D"/>
+  <circle cx="80" cy="86" r="12" fill="#0B1F4D"/>
+  <path d="M60 122c0-14 40-14 40 0v12H60v-12Z" fill="#0B1F4D"/>
+  <circle cx="104" cy="92" r="10" fill="#0B1F4D"/>
+  <path d="M88 122c0-12 32-12 32 0v10H88v-10Z" fill="#0B1F4D"/>
+  <circle cx="122" cy="108" r="16" fill="#F2C94C"/>
+  <path d="M122 100v16M116 108h12" stroke="#0B1F4D" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none" role="img" aria-labelledby="t">
+  <title id="t">Vehicle Loan</title>
+  <circle cx="80" cy="80" r="76" fill="#E3EEF9"/>
+  <path d="M30 98h78l-10-26c-2-6-8-10-14-10H56c-7 0-12 4-14 10L30 98Z" fill="#D32F2F"/>
+  <rect x="36" y="94" width="70" height="16" rx="5" fill="#B71C1C"/>
+  <circle cx="50" cy="114" r="9" fill="#0B1F4D"/>
+  <circle cx="50" cy="114" r="4" fill="#E8F1FB"/>
+  <circle cx="90" cy="114" r="9" fill="#0B1F4D"/>
+  <circle cx="90" cy="114" r="4" fill="#E8F1FB"/>
+  <path d="M68 40c18 0 26 16 26 16s-14 4-26 4-26-4-26-4 8-16 26-16Z" fill="#1E5AA8"/>
+  <path d="M68 36v24" stroke="#F2C94C" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="68" cy="34" r="6" fill="#F2C94C"/>
+  <rect x="112" y="92" width="22" height="14" rx="3" fill="#F2C94C"/>
+  <rect x="118" y="82" width="22" height="14" rx="3" fill="#E8C547"/>
+  <rect x="124" y="72" width="22" height="14" rx="3" fill="#F2C94C"/>
+</svg>

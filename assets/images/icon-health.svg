@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none" role="img" aria-labelledby="t">
+  <title id="t">Health Insurance</title>
+  <circle cx="80" cy="80" r="76" fill="#FDECEC"/>
+  <path d="M80 30L118 46V78C118 106 102 126 80 138C58 126 42 106 42 78V46L80 30Z" fill="#D32F2F"/>
+  <rect x="72" y="62" width="16" height="44" rx="4" fill="#FFFFFF"/>
+  <rect x="58" y="76" width="44" height="16" rx="4" fill="#FFFFFF"/>
+  <path d="M118 104c8 0 18 8 18 18 0 16-18 28-18 28s-18-12-18-28c0-10 10-18 18-18Z" fill="#F15A24"/>
+</svg>

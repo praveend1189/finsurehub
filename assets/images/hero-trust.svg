@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" fill="none" role="img" aria-labelledby="heroTitle">
+  <title id="heroTitle">Family protection and growth</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="520" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E8F1FB"/>
+    </linearGradient>
+    <linearGradient id="shieldFill" x1="250" y1="40" x2="250" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E5AA8"/>
+      <stop offset="1" stop-color="#0B1F4D"/>
+    </linearGradient>
+  </defs>
+  <rect width="520" height="420" rx="32" fill="url(#sky)"/>
+  <circle cx="86" cy="78" r="36" fill="#F2C94C" opacity=".28"/>
+  <circle cx="448" cy="96" r="52" fill="#1E5AA8" opacity=".12"/>
+  <circle cx="470" cy="310" r="28" fill="#F15A24" opacity=".16"/>
+  <path d="M80 338C140 300 210 348 280 320C350 292 410 330 460 308" stroke="#1E5AA8" stroke-opacity=".18" stroke-width="18" stroke-linecap="round"/>
+  <path d="M258 52L368 96V176C368 236 322 284 258 306C194 284 148 236 148 176V96L258 52Z" fill="url(#shieldFill)"/>
+  <path d="M258 74L348 110V176C348 226 310 266 258 286C206 266 168 226 168 176V110L258 74Z" fill="#1E5AA8"/>
+  <rect x="246" y="148" width="24" height="72" rx="6" fill="#FFFFFF"/>
+  <rect x="222" y="172" width="72" height="24" rx="6" fill="#FFFFFF"/>
+  <circle cx="258" cy="128" r="14" fill="#F2C94C"/>
+  <ellipse cx="188" cy="248" rx="18" ry="10" fill="#0B1F4D" opacity=".18"/>
+  <ellipse cx="258" cy="256" rx="22" ry="11" fill="#0B1F4D" opacity=".18"/>
+  <ellipse cx="328" cy="248" rx="18" ry="10" fill="#0B1F4D" opacity=".18"/>
+  <circle cx="188" cy="214" r="16" fill="#E8F1FB"/>
+  <path d="M170 248C170 232 204 232 206 248V262H170V248Z" fill="#E8F1FB"/>
+  <circle cx="258" cy="208" r="19" fill="#FFFFFF"/>
+  <path d="M232 250C232 230 284 230 284 250V268H232V250Z" fill="#FFFFFF"/>
+  <circle cx="328" cy="214" r="16" fill="#E8F1FB"/>
+  <path d="M310 248C310 232 346 232 346 248V262H310V248Z" fill="#E8F1FB"/>
+  <circle cx="228" cy="226" r="10" fill="#F2C94C"/>
+  <circle cx="288" cy="226" r="10" fill="#F2C94C"/>
+  <rect x="72" y="292" width="88" height="54" rx="12" fill="#FFFFFF" stroke="#1E5AA8" stroke-width="3"/>
+  <rect x="88" y="274" width="56" height="28" rx="8" fill="#1E5AA8"/>
+  <rect x="96" y="310" width="40" height="8" rx="4" fill="#F2C94C"/>
+  <rect x="96" y="324" width="28" height="6" rx="3" fill="#0B1F4D" opacity=".25"/>
+  <g transform="translate(372 286)">
+    <rect x="18" y="28" width="10" height="22" rx="2" fill="#5B8FD4"/>
+    <rect x="32" y="18" width="10" height="32" rx="2" fill="#1E5AA8"/>
+    <rect x="46" y="8" width="10" height="42" rx="2" fill="#0B1F4D"/>
+    <path d="M8 46C20 38 30 24 52 10" stroke="#0B1F4D" stroke-width="3" stroke-linecap="round"/>
+    <path d="M44 2L60 6L52 18Z" fill="#0B1F4D"/>
+  </g>
+</svg>

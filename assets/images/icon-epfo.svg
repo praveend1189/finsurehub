@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none" role="img" aria-labelledby="t">
+  <title id="t">EPFO</title>
+  <circle cx="80" cy="80" r="76" fill="#E7F5EA"/>
+  <rect x="36" y="62" width="88" height="58" rx="8" fill="#1E5AA8"/>
+  <rect x="46" y="74" width="18" height="18" rx="3" fill="#E8F1FB"/>
+  <rect x="71" y="74" width="18" height="18" rx="3" fill="#E8F1FB"/>
+  <rect x="96" y="74" width="18" height="18" rx="3" fill="#E8F1FB"/>
+  <rect x="68" y="100" width="24" height="20" rx="3" fill="#0B1F4D"/>
+  <path d="M32 62L80 30l48 32" stroke="#0B1F4D" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="122" cy="48" r="16" fill="#F2C94C"/>
+  <path d="M122 40v16M116 48h12" stroke="#0B1F4D" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

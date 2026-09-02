@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">FINSURE HUB</title>
+  <rect x="6" y="38" width="9" height="18" rx="2.2" fill="#5B8FD4"/>
+  <rect x="18" y="28" width="9" height="28" rx="2.2" fill="#1E5AA8"/>
+  <rect x="30" y="18" width="9" height="38" rx="2.2" fill="#164A8C"/>
+  <rect x="42" y="10" width="9" height="46" rx="2.2" fill="#0B1F4D"/>
+  <path d="M5 50C16 42 24 30 34 20C40 14 46 10 54 7" stroke="#0B1F4D" stroke-width="3.6" stroke-linecap="round" fill="none"/>
+  <path d="M46.2 4.2L58.6 7.4L51.2 17.8Z" fill="#0B1F4D"/>
+</svg>

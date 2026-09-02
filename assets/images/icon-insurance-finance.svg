@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" fill="none" role="img" aria-labelledby="t">
+  <title id="t">Insurance and Finance</title>
+  <circle cx="80" cy="80" r="76" fill="#E3EEF9"/>
+  <path d="M80 28L124 48V82c0 30-18 50-44 62C54 132 36 112 36 82V48L80 28Z" fill="#0B1F4D"/>
+  <path d="M80 42L112 56V82c0 24-14 40-32 50-18-10-32-26-32-50V56L80 42Z" fill="#1E5AA8"/>
+  <circle cx="80" cy="84" r="22" fill="#F2C94C"/>
+  <path d="M80 74v20M70 84h20" stroke="#0B1F4D" stroke-width="4" stroke-linecap="round"/>
+</svg>
