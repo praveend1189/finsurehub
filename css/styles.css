@@ -173,6 +173,7 @@ a {
 
 .btn-call,
 .btn-whatsapp,
+.btn-book,
 .btn-ghost,
 .btn-navy {
   display: inline-flex;
@@ -225,6 +226,26 @@ a {
 .btn-navy {
   background: var(--navy);
   color: var(--white);
+}
+
+.btn-book {
+  background: var(--navy);
+  color: var(--white);
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(11, 31, 77, 0.22);
+}
+
+.btn-book:hover,
+.btn-book:focus {
+  background: #081736;
+  color: var(--white);
+}
+
+.btn-book-label-short {
+  display: none;
 }
 
 .btn-navy:hover,
@@ -836,8 +857,276 @@ a {
 }
 
 body.form-in-view .sticky-call,
-body.form-in-view .whatsapp-fab {
+body.form-in-view .sticky-contact-wrap {
   display: none;
+}
+
+.sticky-contact-wrap {
+  position: fixed;
+  right: 16px;
+  bottom: 78px;
+  z-index: 1041;
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.65rem;
+}
+
+.sticky-contact-wrap.is-visible {
+  display: flex;
+}
+
+.sticky-contact-wrap .whatsapp-fab {
+  position: static;
+  display: flex;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.sticky-contact-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: min(280px, calc(100vw - 32px));
+}
+
+.sticky-contact-menu[hidden] {
+  display: none !important;
+}
+
+.sticky-contact-wrap.is-open .whatsapp-fab {
+  background: #1a5c1e;
+}
+
+.sticky-contact-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 0;
+  border-radius: 14px;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  font: inherit;
+  box-shadow: 0 8px 24px rgba(11, 31, 77, 0.12);
+}
+
+.sticky-contact-wa {
+  background: #e8f5e9;
+  color: var(--navy);
+}
+
+.sticky-contact-book {
+  background: #eef3fb;
+  color: var(--navy);
+}
+
+.sticky-contact-title {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  line-height: 1.25;
+}
+
+.sticky-contact-sub {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+
+.sticky-contact-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sticky-contact-wa .sticky-contact-icon {
+  color: var(--green);
+}
+
+.sticky-contact-book .sticky-contact-icon {
+  color: var(--navy);
+}
+
+/* Booking modal */
+.book-modal-root {
+  position: fixed;
+  inset: 0;
+  z-index: 1060;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.book-modal-root.is-open {
+  display: flex;
+}
+
+body.book-modal-open {
+  overflow: hidden;
+}
+
+.book-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 31, 77, 0.55);
+}
+
+.book-modal {
+  position: relative;
+  width: min(520px, 100%);
+  max-height: min(92vh, 720px);
+  overflow: auto;
+  background: var(--white);
+  border-radius: 18px;
+  padding: 1.35rem 1.25rem 1.25rem;
+  box-shadow: 0 24px 48px rgba(11, 31, 77, 0.2);
+}
+
+.book-modal-close {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.75rem;
+  border: 0;
+  background: transparent;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.book-modal-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  margin: 0 2rem 0.35rem 0;
+  color: var(--navy);
+}
+
+.book-modal-lead {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.book-step-label {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--navy);
+  margin: 0 0 0.5rem;
+}
+
+.book-step-label-slots {
+  margin-top: 1rem;
+}
+
+.book-date-list,
+.book-slot-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.book-date-chip,
+.book-slot-chip {
+  border: 1px solid rgba(11, 31, 77, 0.15);
+  background: var(--white);
+  color: var(--navy);
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.book-date-chip.is-selected,
+.book-slot-chip.is-selected {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+}
+
+.book-slot-hint {
+  font-size: 0.85rem;
+  color: #b45309;
+  margin: 0 0 0.5rem;
+}
+
+.book-modal-actions {
+  margin-top: 1.15rem;
+}
+
+.book-modal-actions-split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: flex-end;
+}
+
+.book-step-summary {
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.85rem;
+  font-size: 0.95rem;
+}
+
+.book-form-banner {
+  background: #fef2f2;
+  color: #991b1b;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.book-field {
+  margin-bottom: 0.85rem;
+}
+
+.book-field label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin-bottom: 0.35rem;
+  color: var(--navy);
+}
+
+.book-req {
+  color: var(--orange);
+}
+
+.book-opt {
+  font-weight: 500;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.book-field input,
+.book-field textarea {
+  width: 100%;
+  border: 1px solid rgba(11, 31, 77, 0.18);
+  border-radius: 10px;
+  padding: 0.55rem 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.book-field input.is-invalid,
+.book-field textarea.is-invalid {
+  border-color: #dc2626;
+}
+
+.book-field-error {
+  color: #dc2626;
+  font-size: 0.82rem;
+  margin: 0.35rem 0 0;
 }
 
 @media (min-width: 992px) {
@@ -849,13 +1138,73 @@ body.form-in-view .whatsapp-fab {
     padding: 0 1.25rem;
   }
 
-  .whatsapp-fab {
+  .sticky-contact-wrap {
     right: 20px;
     bottom: 84px;
   }
 
   .lead {
     padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .book-modal {
+    padding: 1.1rem 0.95rem 1rem;
+    border-radius: 14px;
+  }
+
+  .book-modal-title {
+    font-size: 1.15rem;
+    margin-right: 1.75rem;
+  }
+
+  .book-modal-lead {
+    font-size: 0.84rem;
+    line-height: 1.45;
+    margin-bottom: 0.85rem;
+  }
+
+  .book-step-label {
+    font-size: 0.82rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .book-date-chip,
+  .book-slot-chip {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.7rem;
+  }
+
+  .book-field {
+    margin-bottom: 0.7rem;
+  }
+
+  .book-field label {
+    font-size: 0.82rem;
+    margin-bottom: 0.28rem;
+  }
+
+  .book-field input,
+  .book-field textarea {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.65rem;
+  }
+
+  .book-field-error {
+    font-size: 0.78rem;
+  }
+
+  .book-modal-actions {
+    margin-top: 0.9rem;
+  }
+
+  .btn-book-label-full {
+    display: none;
+  }
+
+  .btn-book-label-short {
+    display: inline;
   }
 }
 

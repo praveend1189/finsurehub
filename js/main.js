@@ -6,7 +6,9 @@
   var leadForm = document.getElementById("leadForm");
   var formStatus = document.getElementById("formStatus");
   var stickyCall = document.querySelector(".sticky-call");
-  var whatsappFab = document.querySelector(".whatsapp-fab");
+  var stickyContactWrap = document.querySelector(".sticky-contact-wrap");
+  var stickyContactToggle = document.getElementById("stickyContactToggle");
+  var stickyContactMenu = document.getElementById("stickyContactMenu");
 
   function closeMobileNav() {
     if (!navCollapseEl || typeof bootstrap === "undefined") return;
@@ -48,7 +50,46 @@
   enableDesktopDropdownHover("navCalculators");
 
   if (stickyCall) stickyCall.classList.add("is-visible");
-  if (whatsappFab) whatsappFab.classList.add("is-visible");
+  if (stickyContactWrap) stickyContactWrap.classList.add("is-visible");
+
+  function closeStickyContactMenu() {
+    if (!stickyContactWrap || !stickyContactMenu || !stickyContactToggle) return;
+    stickyContactWrap.classList.remove("is-open");
+    stickyContactMenu.hidden = true;
+    stickyContactToggle.setAttribute("aria-expanded", "false");
+  }
+
+  function openStickyContactMenu() {
+    if (!stickyContactWrap || !stickyContactMenu || !stickyContactToggle) return;
+    stickyContactWrap.classList.add("is-open");
+    stickyContactMenu.hidden = false;
+    stickyContactToggle.setAttribute("aria-expanded", "true");
+  }
+
+  if (stickyContactToggle && stickyContactMenu) {
+    stickyContactToggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (stickyContactWrap.classList.contains("is-open")) closeStickyContactMenu();
+      else openStickyContactMenu();
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!stickyContactWrap || !stickyContactWrap.classList.contains("is-open")) return;
+      if (stickyContactWrap.contains(e.target)) return;
+      closeStickyContactMenu();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeStickyContactMenu();
+    });
+
+    stickyContactMenu.querySelectorAll(".sticky-contact-book").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        closeStickyContactMenu();
+      });
+    });
+  }
 
   if ("IntersectionObserver" in window && leadForm) {
     var observer = new IntersectionObserver(
