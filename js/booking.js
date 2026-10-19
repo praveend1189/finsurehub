@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var WA_NUMBER = "919303061805";
+  var WA_NUMBER = window.FINSURE_CONTACT && window.FINSURE_CONTACT.waId ? window.FINSURE_CONTACT.waId : "919303061805";
   var SLOT_START = 10;
   var SLOT_END = 19;
   var SLOT_MINUTES = 30;
