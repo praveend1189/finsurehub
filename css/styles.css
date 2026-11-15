@@ -1673,6 +1673,18 @@ a.service-card:focus {
   padding: 0 0.35rem 0.25rem;
 }
 
+.nav-services-menu .nav-services-col > .dropdown-header {
+  font-size: 0.92rem;
+  font-weight: 800;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  color: var(--navy);
+  padding: 0.35rem 0.75rem 0.5rem;
+  margin: 0 0 0.4rem;
+  border-bottom: 1px solid rgba(11, 31, 77, 0.14);
+  pointer-events: none;
+}
+
 .nav-services-col .dropdown-item {
   border-radius: 10px;
   padding: 0.45rem 0.75rem;
@@ -1847,6 +1859,12 @@ a.service-card:focus {
     grid-template-columns: 1fr;
     gap: 0.15rem;
     padding: 0.2rem 0.25rem 0.15rem;
+  }
+
+  .nav-services-menu .nav-services-col + .nav-services-col > .dropdown-header {
+    margin-top: 0.65rem;
+    padding-top: 0.55rem;
+    border-top: 1px solid rgba(11, 31, 77, 0.1);
   }
 
   .nav-services-col .dropdown-item,
