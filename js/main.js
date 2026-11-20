@@ -1,12 +1,14 @@
 (function () {
   "use strict";
 
-  var WA_NUMBER = "919303061805";
+  var WA_NUMBER = window.FINSURE_CONTACT && window.FINSURE_CONTACT.waId ? window.FINSURE_CONTACT.waId : "919303061805";
   var navCollapseEl = document.getElementById("mainNav");
   var leadForm = document.getElementById("leadForm");
   var formStatus = document.getElementById("formStatus");
   var stickyCall = document.querySelector(".sticky-call");
-  var whatsappFab = document.querySelector(".whatsapp-fab");
+  var stickyContactWrap = document.querySelector(".sticky-contact-wrap");
+  var stickyContactToggle = document.getElementById("stickyContactToggle");
+  var stickyContactMenu = document.getElementById("stickyContactMenu");
 
   function closeMobileNav() {
     if (!navCollapseEl || typeof bootstrap === "undefined") return;
@@ -48,7 +50,51 @@
   enableDesktopDropdownHover("navCalculators");
 
   if (stickyCall) stickyCall.classList.add("is-visible");
-  if (whatsappFab) whatsappFab.classList.add("is-visible");
+  if (stickyContactWrap) stickyContactWrap.classList.add("is-visible");
+
+  function closeStickyContactMenu() {
+    if (!stickyContactWrap || !stickyContactMenu || !stickyContactToggle)
+      return;
+    stickyContactWrap.classList.remove("is-open");
+    stickyContactMenu.hidden = true;
+    stickyContactToggle.setAttribute("aria-expanded", "false");
+  }
+
+  function openStickyContactMenu() {
+    if (!stickyContactWrap || !stickyContactMenu || !stickyContactToggle)
+      return;
+    stickyContactWrap.classList.add("is-open");
+    stickyContactMenu.hidden = false;
+    stickyContactToggle.setAttribute("aria-expanded", "true");
+  }
+
+  if (stickyContactToggle && stickyContactMenu) {
+    stickyContactToggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (stickyContactWrap.classList.contains("is-open"))
+        closeStickyContactMenu();
+      else openStickyContactMenu();
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!stickyContactWrap || !stickyContactWrap.classList.contains("is-open"))
+        return;
+      if (stickyContactWrap.contains(e.target)) return;
+      closeStickyContactMenu();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeStickyContactMenu();
+    });
+
+    stickyContactMenu.querySelectorAll(".sticky-contact-book")
+      .forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          closeStickyContactMenu();
+        });
+      });
+  }
 
   if ("IntersectionObserver" in window && leadForm) {
     var observer = new IntersectionObserver(
@@ -57,7 +103,7 @@
           document.body.classList.toggle("form-in-view", entry.isIntersecting);
         });
       },
-      { threshold: 0.28, rootMargin: "0px 0px -12% 0px" }
+      { threshold: 0.28, rootMargin: "0px 0px -12% 0px" },
     );
     observer.observe(leadForm);
   }
@@ -93,7 +139,7 @@
       "",
       "Name: " + data.name,
       "Mobile: " + data.mobile,
-      "Service interest: " + data.service
+      "Service interest: " + data.service,
     ];
     if (data.city) lines.push("City / area: " + data.city);
     if (data.message) lines.push("Message: " + data.message);
@@ -112,8 +158,9 @@
     var requestedService = params.get("service");
     if (requestedService && serviceInput) {
       var match = Array.prototype.find.call(serviceInput.options, function (opt) {
-        return opt.value.toLowerCase() === requestedService.toLowerCase();
-      });
+          return opt.value.toLowerCase() === requestedService.toLowerCase();
+        },
+      );
       if (match) serviceInput.value = match.value;
     }
 
@@ -161,18 +208,15 @@
         return;
       }
 
-      var url =
-        "https://wa.me/" +
-        WA_NUMBER +
-        "?text=" +
+      var url = "https://wa.me/" + WA_NUMBER + "?text=" +
         encodeURIComponent(
           buildWhatsAppText({
             name: name.trim(),
             mobile: mobile.trim(),
             service: service,
             city: city,
-            message: message
-          })
+            message: message,
+          }),
         );
 
       window.open(url, "_blank", "noopener,noreferrer");
